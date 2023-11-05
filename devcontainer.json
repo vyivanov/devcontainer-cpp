@@ -1,0 +1,100 @@
+{
+  "build": {
+    "args": {
+      "username": "${localEnv:USER}"
+    },
+    "dockerfile": "Dockerfile"
+  },
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}",
+    "LANG": "${localEnv:LANG}"
+  },
+  "name": "C++",
+  "runArgs": [
+    "--net=host"
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+  "postStartCommand": ".devcontainer/create-pipenv.sh",
+  "waitFor": "postStartCommand",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // "Continue.continue", // TODO: Estimate with 'ollama'
+        "cheshirekow.cmake-format",
+        "CS128.cs128-clang-tidy",
+        "devtbi.vscode-cppinsights",
+        "eamodio.gitlens",
+        "GitHub.vscode-github-actions",
+        "GitLab.gitlab-workflow",
+        "IBM.output-colorizer",
+        "llvm-vs-code-extensions.vscode-clangd",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.cpptools-extension-pack",
+        "streetsidesoftware.code-spell-checker-russian",
+        "streetsidesoftware.code-spell-checker",
+        "timonwong.shellcheck",
+        "wayou.vscode-todo-highlight"
+      ],
+      "settings": {
+        "clang-tidy.lintOnSave": true,
+        "clangd.arguments": [
+          "--compile-commands-dir=build/",
+          "--header-insertion=iwyu",
+          "--log=verbose",
+          "-j=4"
+        ],
+        "cmake.configureOnOpen": false,
+        "cmake.generator": "Unix Makefiles",
+        "cmake.loggingLevel": "trace",
+        "cmake.options.statusBarVisibility": "icon",
+        "cmake.showOptionsMovedNotification": false,
+        "cSpell.ignoreWords": [
+          "azuretools",
+          "clangd",
+          "cppinsights",
+          "cpptools",
+          "devcontainer",
+          "devtbi",
+          "eamodio",
+          "gdbgui",
+          "iwyu",
+          "makefiles",
+          "pipenv",
+          "pypi",
+          "timonwong.shellcheck",
+          "wayou.vscode-todo-highlight"
+        ],
+        "cSpell.language": "en,ru",
+        "editor.cursorBlinking": "phase",
+        "editor.cursorStyle": "block",
+        "editor.fontFamily": "DejaVu Sans Mono",
+        "editor.fontSize": 15,
+        "editor.formatOnSave": false,
+        "editor.inlayHints.enabled": "offUnlessPressed",
+        "editor.minimap.renderCharacters": true,
+        "editor.minimap.showSlider": "always",
+        "editor.renderWhitespace": "all",
+        "editor.rulers": [
+          90
+        ],
+        "files.autoSave": "onFocusChange",
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "files.trimTrailingWhitespace": true,
+        "gitlens.currentLine.format": "${author, }${agoOrDate}${' via 'pullRequest}",
+        "gitlens.statusBar.enabled": false,
+        "todohighlight.keywords": [
+          {
+            "text": "XXX:",
+            "color": "#3045ff",
+            "backgroundColor": "yellow"
+          }
+        ],
+        "vscode-cppinsights.args": [
+          "-std=c++20"
+        ]
+      }
+    }
+  }
+}
