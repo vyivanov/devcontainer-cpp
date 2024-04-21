@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "cheshirekow.cmake-format",
+    "CS128.cs128-clang-tidy",
+    "deerawan.vscode-dash",
+    "eamodio.gitlens",
+    "IBM.output-colorizer",
+    "llvm-vs-code-extensions.vscode-clangd",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode.cpptools-extension-pack",
+    "streetsidesoftware.code-spell-checker-russian",
+    "streetsidesoftware.code-spell-checker",
+    "timonwong.shellcheck",
+    "wayou.vscode-todo-highlight"
+  ]
+}

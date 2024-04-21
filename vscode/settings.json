@@ -1,0 +1,34 @@
+{
+  "clang-tidy.lintOnSave": true,
+  "clangd.arguments": [
+    "--compile-commands-dir=build/",
+    "--header-insertion=iwyu",
+    "--log=verbose",
+    "-j=4"
+  ],
+  "cmake.configureOnOpen": false,
+  "cmake.generator": "Unix Makefiles",
+  "cmake.loggingLevel": "trace",
+  "cmake.options.statusBarVisibility": "icon",
+  "cmake.showOptionsMovedNotification": false,
+  "cSpell.ignoreWords": [],
+  "cSpell.language": "en,ru",
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "block",
+  "editor.fontFamily": "DejaVu Sans Mono",
+  "editor.fontSize": 15,
+  "editor.formatOnSave": false,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.minimap.renderCharacters": true,
+  "editor.minimap.showSlider": "always",
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [
+    90
+  ],
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "gitlens.currentLine.format": "${author, }${agoOrDate}${' via 'pullRequest}",
+  "gitlens.statusBar.enabled": false
+}
