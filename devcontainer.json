@@ -17,5 +17,24 @@
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
   "workspaceFolder": "/workspace",
   "mounts": ["source=/dev,target=/dev,type=bind"],
-  "postAttachCommand": ".devcontainer/boost.sh"
+  "postAttachCommand": ".devcontainer/boost.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "cheshirekow.cmake-format",
+        "CS128.cs128-clang-tidy",
+        "eamodio.gitlens",
+        "GitHub.vscode-github-actions",
+        "GitLab.gitlab-workflow",
+        "IBM.output-colorizer",
+        "llvm-vs-code-extensions.vscode-clangd",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.cpptools-extension-pack",
+        "streetsidesoftware.code-spell-checker-russian",
+        "streetsidesoftware.code-spell-checker",
+        "timonwong.shellcheck",
+        "wayou.vscode-todo-highlight"
+      ]
+    }
+  }
 }
