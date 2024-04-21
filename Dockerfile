@@ -16,6 +16,7 @@ RUN \
     gdb             \
     git             \
     git-svn         \
+    libcpprest-dev  \
     libfmt-dev      \
     lldb            \
     ltrace          \
@@ -35,9 +36,6 @@ RUN \
     xxd             \
 && \
   rm -rf /var/lib/apt/lists/* \
-&& \
-  wget https://github.com/andreasfertig/cppinsights/releases/download/continuous/insights-ubuntu-14.04.tar.gz \
-    -O - | tar --extract --ungzip --directory=/usr/local/bin/ \
 && \
   wget https://ollama.ai/download/ollama-linux-amd64 \
     -O /usr/local/bin/ollama && chmod +x /usr/local/bin/ollama \

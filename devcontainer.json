@@ -21,9 +21,8 @@
     "vscode": {
       "extensions": [
         // "Continue.continue", // TODO: Estimate with 'ollama'
-        "cheshirekow.cmake-format",
         "CS128.cs128-clang-tidy",
-        "devtbi.vscode-cppinsights",
+        // "devtbi.vscode-cppinsights",
         "eamodio.gitlens",
         "GitHub.vscode-github-actions",
         "GitLab.gitlab-workflow",
@@ -31,6 +30,7 @@
         "llvm-vs-code-extensions.vscode-clangd",
         "ms-azuretools.vscode-docker",
         "ms-vscode.cpptools-extension-pack",
+        "sourcegraph.cody-ai",
         "streetsidesoftware.code-spell-checker-russian",
         "streetsidesoftware.code-spell-checker",
         "timonwong.shellcheck",
@@ -38,12 +38,12 @@
       ],
       "settings": {
         "clang-tidy.lintOnSave": true,
-        "clangd.arguments": [
-          "--compile-commands-dir=build/",
-          "--header-insertion=iwyu",
-          "--log=verbose",
-          "-j=4"
-        ],
+        // "clangd.arguments": [
+        //   "--compile-commands-dir=build/",
+        //   "--header-insertion=iwyu",
+        //   "--log=verbose",
+        //   "-j=4"
+        // ],
         "cmake.configureOnOpen": false,
         "cmake.generator": "Unix Makefiles",
         "cmake.loggingLevel": "trace",
