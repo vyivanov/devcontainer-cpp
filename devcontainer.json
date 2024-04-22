@@ -16,5 +16,6 @@
   ],
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
   "workspaceFolder": "/workspace",
-  "mounts": ["source=/dev,target=/dev,type=bind"]
+  "mounts": ["source=/dev,target=/dev,type=bind"],
+  "postAttachCommand": ".devcontainer/boost.sh"
 }
