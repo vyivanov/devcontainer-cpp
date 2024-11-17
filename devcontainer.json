@@ -1,0 +1,20 @@
+{
+  "name": "C++",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "USERNAME": "${localEnv:USER}"
+    }
+  },
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}",
+    "LANG": "${localEnv:LANG}"
+  },
+  "runArgs": [
+    "--net=host",
+    "--privileged"
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+  "mounts": ["source=/dev,target=/dev,type=bind"]
+}
