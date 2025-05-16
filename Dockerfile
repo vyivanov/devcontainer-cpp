@@ -39,7 +39,13 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
   &&              \
   useradd --create-home --shell /bin/bash --uid 1000 ${USERNAME} \
   &&              \
-  echo "${USERNAME} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/${USERNAME}
+  echo "${USERNAME} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/${USERNAME} \
+  && \
+  wget --directory-prefix=/opt/ https://github.com/ZakKemble/avr-gcc-build/releases/download/v14.1.0-1/avr-gcc-14.1.0-x64-linux.tar.bz2 && \
+  tar -xvjf /opt/avr-gcc-14.1.0-x64-linux.tar.bz2 -C /opt/ && \
+  rm /opt/avr-gcc-14.1.0-x64-linux.tar.bz2
+
+ENV PATH=/opt/avr-gcc-14.1.0-x64-linux/bin/:${PATH}
 
 # TODO: Add tests on provisioned environment.
 USER ${USERNAME}
